@@ -89,6 +89,7 @@ The Junior Developer Glue policy provides limited permissions, focusing on allow
 **Resource Scope:**
 - Both allowed and denied actions apply to all Glue resources (`"Resource": "*"`) to simplify policy management while ensuring that Junior Developers can only read job information without executing them.
 
+
 ## AWS Athena Service Policy for Senior Data Scientist (`AWSAthenaServicePolicy-SeniorDS.json`)
 
 The AWS Athena Service Policy for Senior Data Scientists grants comprehensive permissions for querying data with Athena, managing related AWS Glue resources, accessing query results in S3, and interacting with other AWS services that integrate with Athena. 
@@ -173,3 +174,34 @@ python AWSS3Task.py <profile_name>
 ```bash
 python AWSS3Task.py SeniorDataScientist
 ```
+
+### Expected Result
+
+### **Junior Developer Role:**
+
+- **Listing Bucket Objects:** 
+  - Expected to successfully list objects within the specified S3 bucket, demonstrating read access.
+  - **Result:** `Paper-Demo/`, `Paper-Demo/ForbesRichestAtheletes.csv`, and other objects listed, confirming read permissions.
+
+- **Downloading Object:** 
+  - Expected to download objects like `ForbesRichestAtheletes.csv` from the S3 bucket, showcasing allowed read actions.
+  - **Result:** Successful download of `ForbesRichestAtheletes.csv`, highlighting read access as per the IAM policy.
+
+- **Uploading Object:** 
+  - Attempts to upload `assignment2-student-data.csv` but expected to encounter an "Access Denied" error, reflecting the Junior Developer's policy restrictions on write operations.
+  - **Result:** Upload attempt resulted in "Access Denied", verifying the IAM policy's limitation on write permissions for Junior Developer role.
+
+### **Senior Data Scientist Role:**
+
+- **Listing Bucket Objects:** 
+  - Expected to effortlessly list all objects in the S3 bucket, indicating unrestricted read access.
+  - **Result:** Successfully listed all objects, including `Paper-Demo/ForbesRichestAtheletes.csv`, validating full read access.
+
+- **Downloading Object:** 
+  - Expected to download any specified object from the S3 bucket without restrictions, further proving read capabilities.
+  - **Result:** Successful download of `ForbesRichestAtheletes.csv`, confirming the expected read permissions.
+
+- **Uploading Object:** 
+  - Expected to upload `assignment2-student-data.csv` as `my-upload-test_SeniorDS.csv` without issues, showcasing the comprehensive write permissions granted by the Senior Data Scientist's IAM policy.
+  - **Result:** Successful upload of `assignment2-student-data.csv`, clearly demonstrating the Senior Data Scientist's broad access, including write permissions as defined in the IAM policy.
+
