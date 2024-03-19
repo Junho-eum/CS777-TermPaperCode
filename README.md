@@ -43,11 +43,7 @@ The Senior Data Scientist policy provides full access to specific S3 buckets nec
 **Resource Scope:**
 - Specifically tailored to the `fall23bu` bucket (`"Resource": ["arn:aws:s3:::fall23bu"]`), ensuring that Senior Data Scientists have extensive permissions only to the resources critical for their data projects.
 
-### Creating Policies
-
-These JSON policy files can be directly attached to IAM roles or users within the AWS Management Console, AWS CLI, or through AWS CloudFormation templates, providing granular access control aligned with each role's data access and manipulation needs.
-
-### AWS Glue Service Policies
+## AWS Glue Service Policies
 
 In addition to S3 service policies, this repository contains policies for AWS Glue, a fully managed extract, transform, and load (ETL) service that makes it easy for users to prepare and load their data for analytics. These policies delineate access rights for the Senior Data Scientist and Junior Developer roles, ensuring that permissions are aligned with the responsibilities and requirements of each role.
 
