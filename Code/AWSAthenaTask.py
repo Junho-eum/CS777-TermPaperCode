@@ -52,8 +52,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     profile_name, query, database, s3_output = sys.argv[1:5]
-
-    # Set the session to use your specified profile
     session = boto3.Session(profile_name=profile_name)
 
     # Create Athena client with the session
