@@ -1,0 +1,2 @@
+2024-03-19 15:49:06,732 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-03-19 15:49:06,985 - ERROR - Failed to list Athena databases due to an error: An error occurred (AccessDeniedException) when calling the ListDatabases operation: You are not authorized to perform: athena:ListDatabases on the resource. After your AWS administrator or you have updated your permissions, please try again.

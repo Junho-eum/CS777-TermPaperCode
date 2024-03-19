@@ -1,0 +1,3 @@
+2024-03-19 15:49:56,149 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-03-19 15:49:56,432 - INFO - Successfully listed Athena databases.
+2024-03-19 15:49:56,432 - INFO - Database: term_paper_database
