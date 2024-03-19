@@ -1,31 +1,40 @@
 # CS777-TermPaperCode
 ## Repository Structure
 
-```
-├── Code
-│ ├── AWSAthenaTask.py            # Script for executing Athena queries
-│ ├── AWSGlueTask.py              # Script for managing AWS Glue tasks
-│ ├── AWSS3Task-JuniorDev.py      # Demonstrates S3 access for a Junior Developer
-│ ├── AWSS3Task-SeniorDS.py       # Demonstrates S3 access for a Senior Data Scientist
-│ └── ForbesRichestAtheletes.csv  # Sample dataset for demonstrations
+This repository contains scripts, log files, and IAM policy files used in the demonstration of AWS service tasks and the application of IAM policies for role-specific access control. The structure and contents of this repository are as follows:
 
-├── LogFiles                      # Log files generated from script execution
-│ ├── GlueTask_JuniorDev.log      # Log for Glue tasks executed by Junior Developer
-│ ├── GlueTask_SeniorDS.log       # Log for Glue tasks executed by Senior Data Scientist
-│ ├── AthenaTask_JuniorDev.log    # Log for S3 access by Junior Developer
-│ └── AthenaTask_SeniorDS.log      # Log for S3 access by Senior Data Scientist
-│ ├── Junior_Dev_s3_access.log    # Log for S3 access by Junior Developer
-│ └── SeniorDS_s3_access.log      # Log for S3 access by Senior Data Scientist
+## Code
+Scripts used for executing tasks on AWS services and checking configurations.
+- `AWSAthenaTask-mgmt.py` # Script for managing Athena resources to test IAM policy restrictions
+- `AWSAthenaTask.py` # Script for executing Athena queries
+- `AWSGlueTask.py` # Script for managing AWS Glue tasks
+- `AWSS3Task-JuniorDev.py` # Demonstrates restricted S3 access for a Junior Developer
+- `AWSS3Task-SeniorDS.py` # Demonstrates full S3 access for a Senior Data Scientist
+- `CheckConfig.py` # Utility script to check AWS configurations or permissions
+- `ForbesRichestAtheletes.csv` # Sample dataset used in demonstrations
 
-├── Policies                      # IAM policy files specifying access controls
-│ ├── AWSAthenaFullAccess.json    # Full access policy for Athena (not specifically tied to a role)
-│ ├── AWSAthenaServicePolicy-SeniorDS.json     # Athena policy for Senior Data Scientist
-│ ├── AWSGlueServicePolicy-JuniorDev.json      # Glue policy with restricted access for Junior Developer
-│ ├── AWSGlueServicePolicy-SeniorDS.json       # Glue policy for Senior Data Scientist
-│ ├── AWSS3ServicePolicy-JuniorDev.json        # S3 policy with read-only access for Junior Developer
-│ └── AWSS3ServicePolicy-SeniorDS.json         # S3 policy for Senior Data Scientist
-└── README.md
-```
+## LogFiles
+Contains logs generated from the execution of scripts, providing insights into task outcomes and policy enforcement.
+- `AthenaTask_JuniorDev.log` # Log for Athena query tasks executed by Junior Developer
+- `AthenaTask_SeniorDS.log` # Log for Athena query tasks executed by Senior Data Scientist
+- `Athena_Management_Actions_JuniorDev.log` # Log capturing attempts by Junior Developer to manage Athena resources
+- `Athena_Management_Actions_SeniorDS.log` # Log for Athena management actions successfully performed by Senior Data Scientist
+- `GlueTask_JuniorDev.log` # Log for Glue tasks showing restricted actions by Junior Developer
+- `GlueTask_SeniorDS.log` # Log for successful Glue tasks executed by Senior Data Scientist
+- `Junior_Dev_s3_access.log` # Log detailing S3 access attempts by Junior Developer
+- `SeniorDS_s3_access.log` # Log for unrestricted S3 access by Senior Data Scientist
+
+## Policies
+IAM policies designed to specify and restrict access based on role responsibilities.
+- `AWSAthenaFullAccess.json` # General full access policy for Athena (not role-specific)
+- `AWSAthenaServicePolicy-JuniorDev.json` # Defines Athena access for Junior Developer, focusing on query execution without management actions
+- `AWSAthenaServicePolicy-SeniorDS.json` # Athena access policy for Senior Data Scientist, allowing comprehensive service management
+- `AWSGlueServicePolicy-JuniorDev.json` # Glue policy restricting Junior Developer access to read-only operations
+- `AWSGlueServicePolicy-SeniorDS.json` # Full Glue access policy for Senior Data Scientist
+- `AWSS3ServicePolicy-JuniorDev.json` # S3 policy granting read-only access to Junior Developer
+- `AWSS3ServicePolicy-SeniorDS.json` # S3 policy providing full access for Senior Data Scientist
+
+The structure of this repository is designed to facilitate understanding and demonstration of AWS service tasks and IAM policy applications for different user roles.
 
 ## AWS S3 Service Policies
 
