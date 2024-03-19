@@ -130,11 +130,11 @@ python3 AWSAthenaTask.py <profile_name> '<query>' <database> <s3_output>
 
 ## Demonstrating AWS Glue Policies with `AWSGlueTask.py`
 
-The `AWSGlueTask.py` script plays a pivotal role in our exploration of IAM policy enforcement within AWS Glue services. It is specifically designed to test the IAM policies assigned to the Senior Data Scientist and Junior Developer roles by initiating AWS Glue jobs and monitoring their execution status. This practical demonstration highlights the nuances of access control and permissions within AWS Glue.
+The `AWSGlueTask.py` script is designed to test the IAM policies assigned to the Senior Data Scientist and Junior Developer roles by initiating AWS Glue jobs and monitoring their execution status.
 
 ### Script Functionality
 
-- **Glue Job Execution**: Initiates AWS Glue jobs, showcasing the Senior Data Scientist's ability to leverage Glue for complex ETL tasks, in alignment with the permissions granted by their IAM policy.
+- **Glue Job Execution**: Initiates AWS Glue jobs showing the Senior Data Scientist's role to leverage Glue for complex ETL tasks, in alignment with the permissions granted by their IAM policy.
 - **Status Monitoring**: Continuously checks and logs the execution status of the Glue jobs, providing insights into the operational impact of the IAM policies on Glue job executions.
 
 ### Usage
@@ -152,14 +152,14 @@ python AWSGlueTask.py SeniorDataScientist sample-glue-job
 
 ## Demonstrating S3 Policies with `AWSS3Task.py`
 
-This script is tailored to test the S3 policies applied to the Senior Data Scientist and Junior Developer roles, focusing on operations within Amazon S3. By performing actions such as listing objects in a bucket, downloading, and uploading objects, `AWSS3Task.py` concretely demonstrates the effects of IAM policies on S3 access and manipulation.
+This script is written to test the S3 policies applied to the Senior Data Scientist and Junior Developer roles, focusing on operations within Amazon S3. By performing actions such as listing objects in a bucket, downloading, and uploading objects, `AWSS3Task.py` shows the effects of IAM policies on S3 access and manipulation.
 
 ### Script Functionality
 
 `AWSS3Task.py` encompasses several functions to interact with S3, reflecting different levels of access permissions as defined by IAM policies:
 
-- **List Bucket Objects**: Demonstrates the ability to list objects within a specific S3 bucket directory, showcasing read permissions.
-- **Download Object**: Tests the capability to download an object from S3, highlighting the implications of read permissions.
+- **List Bucket Objects**: Demonstrates the ability to list objects within a specific S3 bucket directory. 
+- **Download Object**: Tests the capability to download an object from S3 with the implications of read permissions.
 - **Upload Object**: Examines the permission to upload an object to S3, differentiating between roles with read-only access versus those with write permissions.
 
 ### Usage
