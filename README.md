@@ -70,6 +70,28 @@ The Junior Developer Glue policy provides limited permissions, focusing on allow
 **Resource Scope:**
 - Both allowed and denied actions apply to all Glue resources (`"Resource": "*"`) to simplify policy management while ensuring that Junior Developers can only read job information without executing them.
 
+### AWS Athena Service Policy for Senior Data Scientist (`AWSAthenaServicePolicy-SeniorDS.json`)
+
+The AWS Athena Service Policy for Senior Data Scientists grants comprehensive permissions for querying data with Athena, managing related AWS Glue resources, accessing query results in S3, and interacting with other AWS services that integrate with Athena for a holistic data analysis experience. This policy ensures Senior Data Scientists have the necessary access to not only execute and manage Athena queries but also to perform related data management tasks across the AWS ecosystem.
+
+#### Policy Actions:
+
+- **Base Athena Permissions (`BaseAthenaPermissions`)**: Grants full access to Athena (`athena:*`), enabling the execution of queries, management of query execution environments, and configuration of Athena settings.
+
+- **Base Glue Permissions (`BaseGluePermissions`)**: Allows comprehensive management of AWS Glue resources which are often used in conjunction with Athena for data cataloging and ETL operations.
+
+- **Base Query Results Permissions (`BaseQueryResultsPermissions`)**: Facilitates access to S3 buckets used for storing Athena query results, ensuring Senior Data Scientists can store, retrieve, and manage query outputs.
+
+- **Base Athena Examples Permissions (`BaseAthenaExamplesPermissions`)**: Provides access to Athena example resources stored in S3, allowing users to fetch example datasets and queries for learning and experimentation.
+
+- **Base S3 Bucket Permissions (`BaseS3BucketPermissions`)**: Grants permissions to list and access S3 buckets, crucial for managing data files used in Athena queries.
+
+- **Base SNS Permissions (`BaseSNSPermissions`)** and **Base CloudWatch Permissions (`BaseCloudWatchPermissions`)**: Allow for notification and monitoring configurations, enabling alerting and operational insights related to Athena query executions.
+
+- **Base Lake Formation Permissions (`BaseLakeFormationPermissions`)**: Enables data access management through AWS Lake Formation, supporting secure data sharing and access control for data lakes.
+
+- **Base Data Zone and Base Pricing Permissions**: Include additional permissions for accessing AWS Data Zone and AWS Pricing information, rounding out the policy to support a wide range of data analysis and management activities.
+
 ### Implementing Policies
 
 To attach these JSON policy files to IAM roles or users, you can use the AWS Management Console, AWS CLI, or AWS CloudFormation, ensuring that each role within your AWS environment has the appropriate permissions for their data tasks in AWS Glue. This setup allows for fine-grained control over data processing and ETL operations, reinforcing security and compliance by adhering to the least privilege principle.
