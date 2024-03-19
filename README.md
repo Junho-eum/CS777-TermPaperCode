@@ -47,7 +47,7 @@ The Senior Data Scientist policy provides full access to specific S3 buckets nec
 
 In addition to S3 service policies, this repository contains policies for AWS Glue, a fully managed extract, transform, and load (ETL) service that makes it easy for users to prepare and load their data for analytics. These policies delineate access rights for the Senior Data Scientist and Junior Developer roles, ensuring that permissions are aligned with the responsibilities and requirements of each role.
 
-#### Senior Data Scientist Glue Policy (`AWSGlueServicePolicy-SeniorDS.json`)
+### Senior Data Scientist Glue Policy (`AWSGlueServicePolicy-SeniorDS.json`)
 
 The Senior Data Scientist Glue policy is designed to grant extensive permissions for AWS Glue service, allowing for full management of Glue resources. This reflects the Senior Data Scientist's need for comprehensive access to perform data processing, analysis, and management tasks within AWS Glue.
 
@@ -59,7 +59,7 @@ The Senior Data Scientist Glue policy is designed to grant extensive permissions
 - S3 access is specifically restricted to the `arn:aws:s3:::fall23bu` bucket.
 - Glue permissions apply broadly to all Glue resources (`"Resource": "*"`) to support various data processing and ETL tasks.
 
-#### Junior Developer Glue Policy (`AWSGlueServicePolicy-JuniorDev.json`)
+### Junior Developer Glue Policy (`AWSGlueServicePolicy-JuniorDev.json`)
 
 The Junior Developer Glue policy provides limited permissions, focusing on allowing read-only access to job definitions and executions. This policy enforces the principle of least privilege by restricting the Junior Developer's ability to start Glue job runs, aligning with a more constrained scope of responsibilities.
 
