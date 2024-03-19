@@ -144,4 +144,6 @@ python AWSGlueTask.py <profile_name> <glue_job_name>
 ```
 
 ### Example Command
-```python AWSGlueTask.py SeniorDataScientist sample-glue-job```
+```bash
+python AWSGlueTask.py SeniorDataScientist sample-glue-job
+```
