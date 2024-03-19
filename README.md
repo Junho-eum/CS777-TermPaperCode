@@ -123,9 +123,6 @@ The script can be run from the command line with the following format:
 python3 AWSAthenaTask.py <profile_name> '<query>' <database> <s3_output>
 ```
 
-- `<profile_name>`: Specifies the AWS CLI profile associated with the IAM role being tested (either Junior Developer or Senior Data Scientist).
-- `<glue_job_name>`: The name of the pre-configured AWS Glue job to execute.
-
 ## Demonstrating AWS Glue Policies with `AWSGlueTask.py`
 
 The `AWSGlueTask.py` script plays a pivotal role in our exploration of IAM policy enforcement within AWS Glue services. It is specifically designed to test the IAM policies assigned to the Senior Data Scientist and Junior Developer roles by initiating AWS Glue jobs and monitoring their execution status. This practical demonstration highlights the nuances of access control and permissions within AWS Glue.
