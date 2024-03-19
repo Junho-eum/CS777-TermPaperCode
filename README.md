@@ -104,4 +104,21 @@ The AWS Athena Service Policy for Senior Data Scientists grants comprehensive pe
 
 To attach these JSON policy files to IAM roles or users, you can use the AWS Management Console, AWS CLI, or AWS CloudFormation, ensuring that each role within your AWS environment has the appropriate permissions for their data tasks in AWS Glue. This setup allows for fine-grained control over data processing and ETL operations, reinforcing security and compliance by adhering to the least privilege principle.
 
+## Demonstrating Athena Queries with `AWSAthenaTask.py`
+
+The `AWSAthenaTask.py` script serves as a practical demonstration of how Senior Data Scientists can leverage Athena for data querying under the permissions granted by the `AWSAthenaServicePolicy-SeniorDS.json`. This script underscores the policy's effectiveness by executing queries in Amazon Athena and logging the process, thus illustrating the IAM policy enforcement in action.
+
+### Script Functionality
+
+- **Query Execution**: Executes a provided SQL query within Amazon Athena, showcasing the ability to analyze data as permitted under the comprehensive access granted to Senior Data Scientists.
+- **Logging**: Records each step of the Athena query execution process, from initiation to completion, in an `Athena_Query_Run.log` file. These logs serve as evidence of the successful application of IAM policies and the script's role in facilitating secure and efficient data analysis.
+
+### Usage
+
+The script can be run from the command line with the following format:
+
+```bash
+python3 AWSAthenaTask.py <profile_name> '<query>' <database> <s3_output>
+
+
 
