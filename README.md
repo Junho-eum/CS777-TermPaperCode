@@ -1,8 +1,6 @@
 # CS777-TermPaperCode
 ## Repository Structure
 
-# Project Repository Structure
-
 This repository contains scripts, log files, and IAM policy files used in the demonstration of AWS service tasks and the application of IAM policies for role-specific access control. The structure and contents of this repository are as follows:
 
 ## Code
