@@ -12,6 +12,8 @@
 ├── LogFiles                      # Log files generated from script execution
 │ ├── GlueTask_JuniorDev.log      # Log for Glue tasks executed by Junior Developer
 │ ├── GlueTask_SeniorDS.log       # Log for Glue tasks executed by Senior Data Scientist
+│ ├── AthenaTask_JuniorDev.log    # Log for S3 access by Junior Developer
+│ └── AthenaTask_SeniorDS.log      # Log for S3 access by Senior Data Scientist
 │ ├── Junior_Dev_s3_access.log    # Log for S3 access by Junior Developer
 │ └── SeniorDS_s3_access.log      # Log for S3 access by Senior Data Scientist
 
