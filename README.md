@@ -123,13 +123,25 @@ The script can be run from the command line with the following format:
 python3 AWSAthenaTask.py <profile_name> '<query>' <database> <s3_output>
 ```
 
-<profile_name>: Specifies the AWS CLI profile associated with the IAM role being tested (either Junior Developer or Senior Data Scientist).
-<glue_job_name>: The name of the pre-configured AWS Glue job to execute.
+- `<profile_name>`: Specifies the AWS CLI profile associated with the IAM role being tested (either Junior Developer or Senior Data Scientist).
+- `<glue_job_name>`: The name of the pre-configured AWS Glue job to execute.
 
 ## Demonstrating AWS Glue Policies with `AWSGlueTask.py`
 
-This script illustrates how Senior Data Scientists and Junior Developers are impacted by their respective IAM policies through the execution and monitoring of AWS Glue jobs
+The `AWSGlueTask.py` script plays a pivotal role in our exploration of IAM policy enforcement within AWS Glue services. It is specifically designed to test the IAM policies assigned to the Senior Data Scientist and Junior Developer roles by initiating AWS Glue jobs and monitoring their execution status. This practical demonstration highlights the nuances of access control and permissions within AWS Glue.
 
-### Script Functionality
+### Script Capabilities
 
-Glue Job Execution: Initiates the execution of a specified AWS Glue job, showcasing Senior Data Scientists' ability to leverage AWS Glue for ETL tasks as allowed by the expansive permissions in their IAM policies.
+- **Glue Job Execution**: Initiates AWS Glue jobs, showcasing the Senior Data Scientist's ability to leverage Glue for complex ETL tasks, in alignment with the permissions granted by their IAM policy.
+- **Status Monitoring**: Continuously checks and logs the execution status of the Glue jobs, providing insights into the operational impact of the IAM policies on Glue job executions.
+
+### Usage Instructions
+
+Execute the script from the command line using the following format:
+
+```bash
+python AWSGlueTask.py <profile_name> <glue_job_name>
+```
+
+### Example Command
+```python AWSGlueTask.py SeniorDataScientist sample-glue-job```
