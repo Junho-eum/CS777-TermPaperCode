@@ -70,7 +70,7 @@ The Junior Developer Glue policy provides limited permissions, focusing on allow
 **Resource Scope:**
 - Both allowed and denied actions apply to all Glue resources (`"Resource": "*"`) to simplify policy management while ensuring that Junior Developers can only read job information without executing them.
 
-### AWS Athena Service Policy for Senior Data Scientist (`AWSAthenaServicePolicy-SeniorDS.json`)
+## AWS Athena Service Policy for Senior Data Scientist (`AWSAthenaServicePolicy-SeniorDS.json`)
 
 The AWS Athena Service Policy for Senior Data Scientists grants comprehensive permissions for querying data with Athena, managing related AWS Glue resources, accessing query results in S3, and interacting with other AWS services that integrate with Athena for a holistic data analysis experience. This policy ensures Senior Data Scientists have the necessary access to not only execute and manage Athena queries but also to perform related data management tasks across the AWS ecosystem.
 
