@@ -8,11 +8,13 @@
 │ ├── AWSS3Task-JuniorDev.py      # Demonstrates S3 access for a Junior Developer
 │ ├── AWSS3Task-SeniorDS.py       # Demonstrates S3 access for a Senior Data Scientist
 │ └── ForbesRichestAtheletes.csv  # Sample dataset for demonstrations
+
 ├── LogFiles                      # Log files generated from script execution
 │ ├── GlueTask_JuniorDev.log      # Log for Glue tasks executed by Junior Developer
 │ ├── GlueTask_SeniorDS.log       # Log for Glue tasks executed by Senior Data Scientist
 │ ├── Junior_Dev_s3_access.log    # Log for S3 access by Junior Developer
 │ └── SeniorDS_s3_access.log      # Log for S3 access by Senior Data Scientist
+
 ├── Policies                      # IAM policy files specifying access controls
 │ ├── AWSAthenaFullAccess.json    # Full access policy for Athena (not specifically tied to a role)
 │ ├── AWSAthenaServicePolicy-SeniorDS.json     # Athena policy for Senior Data Scientist
@@ -120,3 +122,14 @@ The script can be run from the command line with the following format:
 ```bash
 python3 AWSAthenaTask.py <profile_name> '<query>' <database> <s3_output>
 ```
+
+<profile_name>: Specifies the AWS CLI profile associated with the IAM role being tested (either Junior Developer or Senior Data Scientist).
+<glue_job_name>: The name of the pre-configured AWS Glue job to execute.
+
+## Demonstrating AWS Glue Policies with `AWSGlueTask.py`
+
+This script illustrates how Senior Data Scientists and Junior Developers are impacted by their respective IAM policies through the execution and monitoring of AWS Glue jobs
+
+### Script Functionality
+
+Glue Job Execution: Initiates the execution of a specified AWS Glue job, showcasing Senior Data Scientists' ability to leverage AWS Glue for ETL tasks as allowed by the expansive permissions in their IAM policies.
