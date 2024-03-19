@@ -38,7 +38,7 @@ IAM policies designed to specify and restrict access based on role responsibilit
 
 ## AWS S3 Service Policies
 
-This repository includes two AWS S3 service policy files designed to define and limit access to Amazon S3 resources according to the principles of least privilege. These policies are tailored for two distinct roles within our AWS environment: Junior Developer and Senior Data Scientist. Each policy ensures that the permissions granted are aligned with the responsibilities and data access needs of the respective roles.
+This repository includes two AWS S3 service policy files designed to define and limit access to Amazon S3 resources according to the principles of least privilege. These policies are tailored for two distinct roles within the AWS environment: Junior Developer and Senior Data Scientist. Each policy ensures that the permissions granted are aligned with the responsibilities and data access needs of the respective roles.
 
 ### Junior Developer S3 Policy (`AWSS3ServicePolicy-JuniorDev.json`)
 
