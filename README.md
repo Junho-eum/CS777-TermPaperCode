@@ -52,7 +52,7 @@ The Junior Developer policy grants read-only access to S3 resources, enabling us
 - `s3-object-lambda:List*`: Allows listing operations via S3 Object Lambda.
 
 **Resource Scope:**
-- Applies to all S3 resources (`"Resource": "*"`) for broad read access, with the assumption that further access controls are managed at the bucket or account level.
+- Applies to S3 resources in s3 bucket fall23bu for read access to the specified bucket.
 
 ### Senior Data Scientist S3 Policy (`AWSS3ServicePolicy-SeniorDS.json`)
 
@@ -66,7 +66,7 @@ The Senior Data Scientist policy provides full access to specific S3 buckets nec
 
 ## AWS Glue Service Policies
 
-In addition to S3 service policies, this repository contains policies for AWS Glue, a fully managed extract, transform, and load (ETL) service that makes it easy for users to prepare and load their data for analytics. These policies delineate access rights for the Senior Data Scientist and Junior Developer roles, ensuring that permissions are aligned with the responsibilities and requirements of each role.
+In addition to S3 service policies, this repository contains policies for AWS Glue, a fully managed extract, transform, and load (ETL) service that makes it easy for users to prepare and load their data for analytics. These policies arranges access rights for the Senior Data Scientist and Junior Developer roles. 
 
 ### Senior Data Scientist Glue Policy (`AWSGlueServicePolicy-SeniorDS.json`)
 
@@ -82,7 +82,7 @@ The Senior Data Scientist Glue policy is designed to grant extensive permissions
 
 ### Junior Developer Glue Policy (`AWSGlueServicePolicy-JuniorDev.json`)
 
-The Junior Developer Glue policy provides limited permissions, focusing on allowing read-only access to job definitions and executions. This policy enforces the principle of least privilege by restricting the Junior Developer's ability to start Glue job runs, aligning with a more constrained scope of responsibilities.
+The Junior Developer Glue policy provides limited permissions, focusing on allowing read-only access to job definitions and executions. This policy enforces the principle of least privilege by restricting the Junior Developer's ability to start Glue job runs. 
 
 **Policy Actions:**
 - `glue:GetJob`, `glue:GetJobRuns`: Grants permission to view Glue job configurations and their execution history.
@@ -93,7 +93,7 @@ The Junior Developer Glue policy provides limited permissions, focusing on allow
 
 ## AWS Athena Service Policy for Senior Data Scientist (`AWSAthenaServicePolicy-SeniorDS.json`)
 
-The AWS Athena Service Policy for Senior Data Scientists grants comprehensive permissions for querying data with Athena, managing related AWS Glue resources, accessing query results in S3, and interacting with other AWS services that integrate with Athena for a holistic data analysis experience. This policy ensures Senior Data Scientists have the necessary access to not only execute and manage Athena queries but also to perform related data management tasks across the AWS ecosystem.
+The AWS Athena Service Policy for Senior Data Scientists grants comprehensive permissions for querying data with Athena, managing related AWS Glue resources, accessing query results in S3, and interacting with other AWS services that integrate with Athena. 
 
 #### Policy Actions:
 
@@ -107,24 +107,18 @@ The AWS Athena Service Policy for Senior Data Scientists grants comprehensive pe
 
 - **Base S3 Bucket Permissions (`BaseS3BucketPermissions`)**: Grants permissions to list and access S3 buckets, crucial for managing data files used in Athena queries.
 
-- **Base SNS Permissions (`BaseSNSPermissions`)** and **Base CloudWatch Permissions (`BaseCloudWatchPermissions`)**: Allow for notification and monitoring configurations, enabling alerting and operational insights related to Athena query executions.
-
-- **Base Lake Formation Permissions (`BaseLakeFormationPermissions`)**: Enables data access management through AWS Lake Formation, supporting secure data sharing and access control for data lakes.
-
-- **Base Data Zone and Base Pricing Permissions**: Include additional permissions for accessing AWS Data Zone and AWS Pricing information, rounding out the policy to support a wide range of data analysis and management activities.
-
 ### Implementing Policies
 
-To attach these JSON policy files to IAM roles or users, you can use the AWS Management Console, AWS CLI, or AWS CloudFormation, ensuring that each role within your AWS environment has the appropriate permissions for their data tasks in AWS Glue. This setup allows for fine-grained control over data processing and ETL operations, reinforcing security and compliance by adhering to the least privilege principle.
+To attach these JSON policy files to IAM roles or users, use the AWS Management Console, AWS CLI, or AWS CloudFormation, ensuring that each role within your AWS environment has the appropriate permissions.
 
 ## Demonstrating AWS Athena Policies with `AWSAthenaTask.py`
 
-The `AWSAthenaTask.py` script serves as a practical demonstration of how Senior Data Scientists can leverage Athena for data querying under the permissions granted by the `AWSAthenaServicePolicy-SeniorDS.json`. This script underscores the policy's effectiveness by executing queries in Amazon Athena and logging the process, thus illustrating the IAM policy enforcement in action.
+The `AWSAthenaTask.py` script simulates how Senior Data Scientists can leverage Athena for data querying under the permissions granted by the `AWSAthenaServicePolicy-SeniorDS.json`. 
 
 ### Script Functionality
 
-- **Query Execution**: Executes a provided SQL query within Amazon Athena, showcasing the ability to analyze data as permitted under the comprehensive access granted to Senior Data Scientists.
-- **Logging**: Records each step of the Athena query execution process, from initiation to completion, in an `Athena_Query_Run.log` file. These logs serve as evidence of the successful application of IAM policies and the script's role in facilitating secure and efficient data analysis.
+- **Query Execution**: Executes a provided SQL query within Amazon Athena to analyze data as permitted under the comprehensive access granted to Senior Data Scientists.
+- **Logging**: Records each step of the Athena query execution process, from initiation to completion, in an `Athena_Query_Run.log` file. 
 
 ### Usage
 
