@@ -119,6 +119,4 @@ The script can be run from the command line with the following format:
 
 ```bash
 python3 AWSAthenaTask.py <profile_name> '<query>' <database> <s3_output>
-
-
-
+```
