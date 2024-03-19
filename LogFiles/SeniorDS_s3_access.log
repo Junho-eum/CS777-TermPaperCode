@@ -1,0 +1,12 @@
+2024-03-16 14:54:35,244 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-03-16 14:54:35,376 - INFO - Listing bucket objects:
+2024-03-16 14:54:35,587 - INFO - Paper-Demo/
+2024-03-16 14:54:35,587 - INFO - Paper-Demo/ForbesRichestAtheletes.csv
+2024-03-16 14:54:35,587 - INFO - Paper-Demo/my-upload-test.csv
+2024-03-16 14:54:35,587 - INFO - Paper-Demo/my-upload-test_JuniorDev.csv
+2024-03-16 14:54:35,587 - INFO - 
+Downloading an object:
+2024-03-16 14:54:35,706 - INFO - Paper-Demo/ForbesRichestAtheletes.csv has been downloaded to ForbesRichestAtheletes.csv.
+2024-03-16 14:54:35,707 - INFO - 
+Uploading an object:
+2024-03-16 14:54:35,823 - INFO - /Users/junhoeum/Desktop/Fall23/CS777/HW2/assignment2-student-data.csv has been uploaded as Paper-Demo/my-upload-test_SeniorDS.csv.

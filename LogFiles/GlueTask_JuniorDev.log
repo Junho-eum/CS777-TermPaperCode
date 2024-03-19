@@ -1,0 +1,6 @@
+2024-03-18 16:32:59,602 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-03-18 16:32:59,831 - INFO - Attempting to execute Glue job: GlueDemo2
+2024-03-18 16:33:00,512 - INFO - Started Glue job: GlueDemo2 with run ID: jr_822859dd902a3e2e8a7a47c87089c06cbe0ac4777887dfdb0e342729029c4c4d
+2024-03-18 16:33:00,605 - INFO - Job run jr_822859dd902a3e2e8a7a47c87089c06cbe0ac4777887dfdb0e342729029c4c4d status: RUNNING
+2024-03-18 16:33:31,447 - INFO - Job run jr_822859dd902a3e2e8a7a47c87089c06cbe0ac4777887dfdb0e342729029c4c4d status: FAILED
+2024-03-18 16:33:31,449 - INFO - Final status of Glue job run jr_822859dd902a3e2e8a7a47c87089c06cbe0ac4777887dfdb0e342729029c4c4d: FAILED

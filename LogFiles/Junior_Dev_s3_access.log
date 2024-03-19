@@ -1,0 +1,12 @@
+2024-03-16 14:51:27,438 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-03-16 14:51:27,527 - INFO - Listing bucket objects:
+2024-03-16 14:51:27,880 - INFO - Paper-Demo/
+2024-03-16 14:51:27,881 - INFO - Paper-Demo/ForbesRichestAtheletes.csv
+2024-03-16 14:51:27,881 - INFO - Paper-Demo/my-upload-test.csv
+2024-03-16 14:51:27,881 - INFO - Paper-Demo/my-upload-test_JuniorDev.csv
+2024-03-16 14:51:27,881 - INFO - 
+Downloading an object:
+2024-03-16 14:51:27,992 - INFO - Paper-Demo/ForbesRichestAtheletes.csv has been downloaded to ForbesRichestAtheletes.csv.
+2024-03-16 14:51:27,992 - INFO - 
+Uploading an object:
+2024-03-16 14:51:28,048 - ERROR - Unexpected error occurred: Failed to upload /Users/junhoeum/Desktop/Fall23/CS777/HW2/assignment2-student-data.csv to fall23bu/Paper-Demo/my-upload-test_JuniorDev.csv: An error occurred (AccessDenied) when calling the PutObject operation: Access Denied
