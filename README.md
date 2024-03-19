@@ -1,6 +1,6 @@
 # CS777-TermPaperCode
 ## Repository Structure
-.
+```
 ├── Code
 │   ├── AWSAthenaTask.py            # Script for executing Athena queries
 │   ├── AWSGlueTask.py              # Script for managing AWS Glue tasks
@@ -13,3 +13,4 @@
 │   ├── Junior_Dev_s3_access.log    # Log for S3 access by Junior Developer
 │   └── SeniorDS_s3_access.log      # Log for S3 access by Senior Data Scientist
 └── README.md
+```
