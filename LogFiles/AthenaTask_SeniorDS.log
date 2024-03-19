@@ -1,0 +1,5 @@
+2024-03-19 12:20:08,933 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-03-19 12:20:09,190 - INFO - Started Athena query with Execution ID: c57e1eea-b7d8-45de-9436-a86b662d9a40
+2024-03-19 12:20:09,247 - INFO - Query Execution ID c57e1eea-b7d8-45de-9436-a86b662d9a40 status: QUEUED
+2024-03-19 12:20:14,309 - INFO - Query Execution ID c57e1eea-b7d8-45de-9436-a86b662d9a40 status: SUCCEEDED
+2024-03-19 12:20:14,309 - INFO - Final status of Athena query c57e1eea-b7d8-45de-9436-a86b662d9a40: SUCCEEDED
