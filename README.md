@@ -173,6 +173,30 @@ python AWSGlueTask.py <profile_name> <glue_job_name>
 python AWSGlueTask.py SeniorDataScientist sample-glue-job
 ```
 
+## Expected Results from `AWSGlueTask.py` Execution
+
+The `AWSGlueTask.py` script demonstrates the effects of IAM policies on the ability of Senior Data Scientists and Junior Developers to execute and monitor AWS Glue jobs.
+
+### **Junior Developer Role:**
+
+- **Glue Job Execution Status Monitoring:** 
+  - Expected to monitor the status of initiated Glue jobs, within their permissions.
+  - **Result:** The job status was monitored but resulted in failure, highlighting the Junior Developer's restricted execution capabilities.
+
+- **Glue Job Execution Outcome:** 
+  - Expected failure due to insufficient permissions for complete Glue job management and execution.
+  - **Result:** Confirmed by the job's failure, reinforcing the Junior Developer's limited access.
+
+### **Senior Data Scientist Role:**
+
+- **Glue Job Execution Status Monitoring:** 
+  - Expected to efficiently monitor the execution status, indicating operational oversight.
+  - **Result:** Effective monitoring and reporting of the job's successful completion were achieved.
+
+- **Glue Job Execution Outcome:** 
+  - Expected successful job execution, leveraging the comprehensive Glue capabilities permitted by their IAM policy.
+  - **Result:** The job's successful completion confirms the Senior Data Scientist's role in advanced data processing tasks.
+    
 ## Demonstrating S3 Policies with `AWSS3Task.py`
 
 This script is written to test the S3 policies applied to the Senior Data Scientist and Junior Developer roles, focusing on operations within Amazon S3. By performing actions such as listing objects in a bucket, downloading, and uploading objects, `AWSS3Task.py` shows the effects of IAM policies on S3 access and manipulation.
