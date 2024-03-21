@@ -112,7 +112,7 @@ To attach these JSON policy files to IAM roles or users, use the AWS Management 
 
 ## Demonstrating AWS Athena Management Policies with `AWSAthenaTask-mgmt.py`
 
-The `AWSAthenaTask-mgmt.py` script is tailored to showcase the impact of IAM policies on the ability to perform management actions within Amazon Athena, particularly focusing on listing Athena databases.
+The `AWSAthenaTask-mgmt.py` script is written to showcase the impact of IAM policies on the ability to perform management actions within Amazon Athena focusing on listing Athena databases.
 
 ### Script Functionality
 
@@ -128,7 +128,7 @@ To utilize this management action script, execute it from the command line with 
 python AWSAthenaTask-mgmt.py <profile_name>
 ```
 
-## Expected Results from `AWSAthenaTask.py` Execution
+## Expected Results from `AWSAthenaTask-mgmt.py` Execution
 
 The `AWSAthenaTask.py` script is engineered to evaluate the IAM policies' impact on Athena query executions for two defined roles: **Senior Data Scientist** and **Junior Developer**. The outcomes align with the IAM policy specifications for each role.
 
