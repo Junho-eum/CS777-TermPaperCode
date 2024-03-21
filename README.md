@@ -127,6 +127,30 @@ The script can be run from the command line with the following format:
 python3 AWSAthenaTask.py <profile_name> '<query>' <database> <s3_output>
 ```
 
+## Expected Results from `AWSAthenaTask.py` Execution
+
+The `AWSAthenaTask.py` script is engineered to evaluate the IAM policies' impact on Athena query executions for two defined roles: **Senior Data Scientist** and **Junior Developer**. The outcomes align with the IAM policy specifications for each role.
+
+### **Junior Developer Role:**
+
+- **Query Execution:** 
+  - **Expectation:** Capable of executing straightforward SELECT queries under read and query execution permissions.
+  - **Result:** Encountered an "Access Denied" error while trying to list Athena databases, underscoring the restrictive IAM policy's design to limit management actions such as listing databases.
+
+- **Management Actions:** 
+  - **Expectation:** Anticipated restrictions on management actions due to IAM policy constraints.
+  - **Result:** Received an "Access Denied" error for the `ListDatabases` operation, affirming the policy's intention to restrict Junior Developer's management capabilities.
+
+### **Senior Data Scientist Role:**
+
+- **Query Execution:** 
+  - **Expectation:** Authorization to execute Athena queries without limitations, indicating comprehensive access.
+  - **Result:** Queries, including the action to list Athena databases, executed successfully, demonstrating unrestricted access as defined by the IAM policy.
+
+- **Management Actions:** 
+  - **Expectation:** Ability to carry out management actions such as listing databases and altering settings, reflecting the extensive permissions awarded to Senior Data Scientists.
+  - **Result:** Successful listing of Athena databases and execution of other management actions, confirming the extensive permissions detailed in the IAM policy for this role.
+
 ## Demonstrating AWS Glue Policies with `AWSGlueTask.py`
 
 The `AWSGlueTask.py` script is designed to test the IAM policies assigned to the Senior Data Scientist and Junior Developer roles by initiating AWS Glue jobs and monitoring their execution status.
