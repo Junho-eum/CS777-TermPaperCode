@@ -110,21 +110,22 @@ The AWS Athena Service Policy for Senior Data Scientists grants comprehensive pe
 
 To attach these JSON policy files to IAM roles or users, use the AWS Management Console, AWS CLI, or AWS CloudFormation, ensuring that each role within your AWS environment has the appropriate permissions.
 
-## Demonstrating AWS Athena Policies with `AWSAthenaTask.py`
+## Demonstrating AWS Athena Management Policies with `AWSAthenaTask-mgmt.py`
 
-The `AWSAthenaTask.py` script simulates how Senior Data Scientists can leverage Athena for data querying under the permissions granted by the `AWSAthenaServicePolicy-SeniorDS.json`. 
+The `AWSAthenaTask-mgmt.py` script is tailored to showcase the impact of IAM policies on the ability to perform management actions within Amazon Athena, particularly focusing on listing Athena databases.
 
 ### Script Functionality
 
-- **Query Execution**: Executes a provided SQL query within Amazon Athena to analyze data as permitted under the comprehensive access granted to Senior Data Scientists.
-- **Logging**: Records each step of the Athena query execution process, from initiation to completion, in an `Athena_Query_Run.log` file. 
+- **Listing Athena Databases**: This core function attempts to list all databases within the Athena service, demonstrating the management capabilities granted or restricted by the IAM policies.
+
+- **Logging**: Every action, including successful listings or potential errors due to permission issues, is recorded in an `Athena_Management_Actions.log` file for audit and review.
 
 ### Usage
 
-The script can be run from the command line with the following format:
+To utilize this management action script, execute it from the command line with the profile name of the IAM role being tested:
 
 ```bash
-python3 AWSAthenaTask.py <profile_name> '<query>' <database> <s3_output>
+python AWSAthenaTask-mgmt.py <profile_name>
 ```
 
 ## Expected Results from `AWSAthenaTask.py` Execution
