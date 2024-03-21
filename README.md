@@ -128,6 +128,12 @@ To utilize this management action script, execute it from the command line with 
 python AWSAthenaTask-mgmt.py <profile_name>
 ```
 
+### Example Command
+
+```bash
+python AWSAthenaTask-mgmt.py SeniorDataScientist
+```
+
 ## Expected Results from `AWSAthenaTask-mgmt.py` Execution
 
 The `AWSAthenaTask.py` script is engineered to evaluate the IAM policies' impact on Athena query executions for two defined roles: **Senior Data Scientist** and **Junior Developer**. The outcomes align with the IAM policy specifications for each role.
